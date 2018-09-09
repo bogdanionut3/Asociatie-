@@ -26,6 +26,16 @@ public class Locatar implements Serializable{
     public Locatar() {
     }
 
+    @Override
+    public boolean equals(Object obj)
+    {
+        if(obj instanceof Locatar)
+        {
+            Locatar loc = (Locatar) obj;
+            return  (this.name.equals(loc.name))&&(this.cnp.equals(loc.cnp))&&(this.email.equals(loc.email));
+        }
+        return false;
+    }
     public void setAp(Apartament ap){
         this.ap = ap;
     }

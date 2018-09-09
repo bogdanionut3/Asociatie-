@@ -1,5 +1,6 @@
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 @Entity
 
@@ -19,6 +20,7 @@ public class Apartament implements Serializable {
         for(Contor c: contoare){
             c.setAp(this);
         }
+        locatari = new ArrayList<Locatar>();
     }
     public void addLoc(Locatar loc){
         locatari.add(loc);
@@ -27,7 +29,7 @@ public class Apartament implements Serializable {
 
     public void removeLoc(Locatar loc){
         locatari.remove(loc);
-        loc.setAp(this);
+        loc.setAp(null);
     }
 
 

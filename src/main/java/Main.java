@@ -36,7 +36,7 @@ public class Main {
         String mail = sc.next();
         Apartament ap = new Apartament();
         Locatar loc = new Locatar(nume,CNP,mail);
-        asc.unregister(ap,loc);
+        asc.unregister(loc);
     }
 
     public static void optiunea3(Scanner sc, Apartament ap){
