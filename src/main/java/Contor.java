@@ -30,6 +30,7 @@ public class Contor implements Serializable {
         this.index = index;
         this.type = type;
     }
+
     public void setAp(Apartament ap){
         this.ap = ap;
     }

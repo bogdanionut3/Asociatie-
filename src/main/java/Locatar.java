@@ -17,11 +17,12 @@ public class Locatar implements Serializable{
     @ManyToOne
     private Apartament ap;
 
-    public Locatar(  String name, String cnp, String email){
+    public Locatar(String name, String cnp, String email){
         this.name = name;
         this.cnp = cnp;
         this.email = email;
-    }
+
+}
 
     public Locatar() {
     }

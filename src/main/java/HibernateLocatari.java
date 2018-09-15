@@ -17,11 +17,11 @@ public class HibernateLocatari {
 
     public void insert(Object obj) {
         s.beginTransaction();
-        s.save(obj);
+        s.saveOrUpdate(obj);
         s.getTransaction().commit();
     }
 
-    public List<Object> getAll(Class type) {//primeste o clasa ca parametru
+    public List<Object> getAll(Class type){
         return s.createCriteria(type).list();
     }
 
